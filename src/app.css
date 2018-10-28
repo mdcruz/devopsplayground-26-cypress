@@ -1,0 +1,60 @@
+
+.app { 
+  display: grid;
+  grid-gap: 20px;
+  margin: 0;
+  width: 100%;
+}
+
+.gallery {
+  max-width: 100%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+body {
+  font-family: 'Raleway Dots', cursive;
+}
+
+.footer {
+  padding-left: 20.3%;
+  font-size: 10px;
+}
+
+.header {
+  display: inline-flex;
+}
+
+.title, .icons {
+  display: inline;
+}
+
+.title {
+  padding-left: 20%;
+  font-size: 20px;
+} 
+
+.icons {
+  padding-left: 36%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 20px;
+}
+
+li {
+  float: right;
+  padding: 12px;
+}
+
+li a {
+  text-align: center;
+  text-decoration: none;
+}
+
+li a img {
+  opacity: 0.5;
+}
