@@ -19,6 +19,7 @@ LinkedIn: [Let's connect](https://www.linkedin.com/in/marie-desiree-cruz-9584124
 - [Setup](#setup)
 - [Cypress Setup](#cypress-project-setup)
 - [Writing Tests](#writing-tests)
+- [Cypress CLI Commands](#cypress-cli-commands)
 - [Further Reading](#further-reading)
 
 ## Overview
@@ -34,7 +35,7 @@ Cypress is a test automation tool created by Brian Mann to to help developers wr
 - Basic Javascript knowledge
 
 ## Setup
-// Add setup details here
+The remote machine (connection details to be shared) will have all the programs you need to follow this session. For any technical assistance, please ask any member
 
 ## Cypress Project Setup
 Once you are succesfully logged in to your instance, follow the steps below to setup Cypress.
@@ -58,14 +59,19 @@ npm run start
 
 ![](images/react-app.png)
 
-4. To open Cypress, open another terminal window and run:
+4. To verify if Cypress has been installed correctly:
 ```
-npm run cypress open
+npx cypress verify
 ```
 
-5. To run tests headlessly, use the below command:
+5. To open Cypress, open another terminal window and run:
 ```
-npm run test:e2e
+npx cypress open
+```
+
+6. To run tests headlessly, use the below command:
+```
+npx cypress run
 ```
 
 ![](images/cypress-runner.png)
@@ -87,6 +93,12 @@ it('should display the title correctly', () => {
   cy.get('.icons > ul > li').should('have.length', 3);
 });
 ```
+
+## Cypress CLI commands
+
+- To use a different type of Chrome browser, use `npx cypress run --browser [browserName]` (e.g. `npx cypress run --browser canary` canary if Canary is installed)
+- To run a single spec file, use `npx cypress run --spec [path to your spec file]` (e.g `npx cypress run --spec cypress/integration/image.gallery.spec.js`)
+- To record test runs, use `npx cypress run --record` however Dashboard service needs to be set up (next meetup!)   
 
 ## Further Reading
 
