@@ -35,7 +35,7 @@ Cypress is a test automation tool created by Brian Mann to to help developers wr
 - Basic Javascript knowledge
 
 ## Setup
-The remote machine (connection details to be shared) will have all the programs you need to follow this session. For any technical assistance, please ask any member
+The remote machine (connection details to be shared) will have all the programs you need to follow this session. For any technical assistance, please ask around for help.
 
 ## Cypress Project Setup
 Once you are succesfully logged in to your instance, follow the steps below to setup Cypress.
