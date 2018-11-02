@@ -52,6 +52,10 @@ git clone https://github.com/ecsdigital/devopsplayground-26-cypress.git
 npm i
 ```
 
+You should then see Cypress being installed...
+  
+![](images/cypress-install.png)
+
 3. Start the React application. Once the application is booted, it can be accessed by navigating to `http://localhost:3000/`
 ```
 npm run start
@@ -92,6 +96,11 @@ it('should display the title correctly', () => {
   cy.get('#title').should('have.text', ' Marie Cruz ');
   cy.get('.icons > ul > li').should('have.length', 3);
 });
+```
+
+### Scenario 4 example code
+```
+Cypress.Commands.add("login", (email, password) => { ... })
 ```
 
 ## Cypress CLI commands
