@@ -76,9 +76,9 @@ npx cypress run
 
 ![](images/cypress-runner.png)
 
-If you click one of the spec files, Cypress will inform you that there are no tests found (we need to implement it!)
+If you click one of the spec files, Cypress will display the tests available as well as the application under test.
 
-![](images/cypress-no-tests.png)
+![](images/cypress-tests.png)
 
 ## Writing Tests
 1. Scenario: Verify that title is displayed correctly
