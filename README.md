@@ -2,7 +2,7 @@
 ![](images/cypress-io-logo.png)
 
 # Introduction
-On this meetup, we will walk you through what Cypress is and how it's different from existing test automation tools such as Cypress. We'll show you how to setup Cypress in your machines and write your first Cypress test.
+On this meetup, we will walk you through what Cypress is and how it's different from existing test automation tools such as Selenium. We'll show you how to setup Cypress in your machines and write your first Cypress test.
 
 Name: Marie Cruz
 
