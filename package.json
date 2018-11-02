@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "eslint": "5.8.0",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-grid-gallery": "0.5.3",
@@ -13,13 +14,21 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "cypress": "cypress"
+    "cypress": "cypress",
+    "lint": "eslint ."
   },
+  "pre-commit": [
+    "lint"
+  ],
   "eslintConfig": {
     "extends": "react-app"
   },
   "devDependencies": {
-    "cypress": "3.1.0"
+    "babel-eslint": "^10.0.1",
+    "cypress": "3.1.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-cypress": "^2.0.1",
+    "pre-commit": "^1.2.2"
   },
   "browserslist": [
     ">0.2%",
