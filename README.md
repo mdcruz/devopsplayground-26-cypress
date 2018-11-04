@@ -40,43 +40,44 @@ The remote machine (connection details to be shared) will have all the programs 
 ## Cypress Project Setup
 Once you are succesfully logged in to your instance, follow the steps below to setup Cypress.
 
-1. Open up a terminal and clone the project
-```
-mkdir cypressProject
-cd cypressProject
-git clone https://github.com/ecsdigital/devopsplayground-26-cypress.git
+1. On your desktop, click Visual Studio Code
+2. Click on Open Folder
 
-```
-2. Install project dependencies 
-```
-npm i
-```
+![](images/vscode-open.png)
 
-You should then see Cypress being installed...
-  
-![](images/cypress-install.png)
+3. Navigate to this folder `C:/Users/ecs_user/cypressProject/devopsplayground-26-cypress` and click Select folder
 
-3. Start the React application. Once the application is booted, it can be accessed by navigating to `http://localhost:3000/`
+![](images/folder-navigation.png)
+
+4. Once the project is loaded on Visual Studio, let's open up the terminal to run some commands.
+
+![](images/vscode-terminal.png)
+
+5. On the terminal, let's start up the sample application that we are testing today by typing in:
 ```
 npm run start
 ```
 
+Once the application is booted, it can be accessed by navigating to `http://localhost:3000/`
+
 ![](images/react-app.png)
 
-4. To verify if Cypress has been installed correctly:
+6. To verify if Cypress has been installed correctly, let's go back to Visual Studio Code and open up a new terminal.
+
+![](images/vscode-new-terminal.png)
+
+On the new terminal, type in:
+
 ```
 npx cypress verify
 ```
 
-5. To open Cypress, open another terminal window and run:
+7. We are ready to use Cypress. To open Cypress, type in the below command:
 ```
 npx cypress open
 ```
 
-6. To run tests headlessly, use the below command:
-```
-npx cypress run
-```
+You should then see the Cypress Test Runner up and running with 2 spec files.
 
 ![](images/cypress-runner.png)
 
