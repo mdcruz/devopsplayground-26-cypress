@@ -96,6 +96,9 @@ If you click one of the spec files, Cypress will display the tests available as 
 The selector playground is a feature provided by Cypress as part of the test runner. This helps you find the selector for the element that you wish to test. To use this feature, simply click on 
 <img src="images/selector-playground.png" height="20" width="20" /> and hover on an element. Cypress will provide you with the selector to use.
 
+![](images/selector-playground-1.png)
+![](images/selector-playground-2.png)
+
 
 ## Writing Tests
 Since this is a hands on session, I have included the Cypress commands that we will use with an explanation of what it do. Please refer to below table as much as you need.
