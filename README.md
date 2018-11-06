@@ -18,13 +18,18 @@ LinkedIn: [Let's connect](https://www.linkedin.com/in/marie-desiree-cruz-9584124
 - [Requirements](#requirements)
 - [Setup](#setup)
 - [Cypress Setup](#cypress-project-setup)
+- [Selector Playground](#selector-playground)
 - [Writing Tests](#writing-tests)
+  - [Cheat Sheet](#cheat-sheet)
+  - [Scenario 1: Verify that title is displayed correctly](#scenario-1)
+  - [Scenario 2: Verify that image gallery displays correctly](#scenario-2)
+  - [Scenario 3: Verify that Squarespace login works correctly](#scenario-3)
 - [Cypress CLI Commands](#cypress-cli-commands)
 - [Further Reading](#further-reading)
 
 ## Overview
 
-Cypress is a test automation tool created by Brian Mann to to help developers write automation tests from a user’s perspective. Cypress is written purely in JavaScript and was created to address all the issues developers face when writing tests. Let's admit it, developers hate writing tests! From setting up the framework, debugging why the test is flaky, and dealing with the complexities of managing tests, it's no wonder why most developers prefer to put E2E tests on the side. 
+Cypress is a test automation tool created by Brian Mann to help developers write automation tests from a user’s perspective. Cypress is written purely in JavaScript and was created to address all the issues developers face when writing tests. Let's admit it, developers hate writing tests! From setting up the framework, debugging why the test is flaky, and dealing with the complexities of managing tests, it's no wonder why most developers prefer to put E2E tests on the side. 
 
 ![](images/cypress-test-runner.png)
 
@@ -72,7 +77,9 @@ On the new terminal, type in:
 npx cypress verify
 ```
 
-7. We are ready to use Cypress. To open Cypress, type in the below command:
+You should see a message that Cypress is verified and ready to use.
+
+7. To open Cypress, type in the below command:
 ```
 npx cypress open
 ```
@@ -85,11 +92,29 @@ If you click one of the spec files, Cypress will display the tests available as 
 
 ![](images/cypress-tests.png)
 
+## Selector Playground
+The selector playground is a feature provided by Cypress as part of the test runner. This helps you find the selector for the element that you wish to test. To use this feature, simply click on 
+<img src="images/selector-playground.png" height="20" width="20" /> and hover on an element. Cypress will provide you with the selector to use.
+
+
 ## Writing Tests
+Since this is a hands on session, I have included the Cypress commands that we will use with an explanation of what it do. Please refer to below table as much as you need.
+
+### Cheat Sheet
+
+| API Command      | Description              | Example |
+| -------------    | ---------------------    | -----   |
+| cy.visit(url)  | Visits a url. When you add the property `baseUrl` on `cypress.json`, Cypress will take this as your base url.   | cy.visit('http://localhost:3000') or cy.visit('/register.html')|
+| cy.get(selector)  | Gets the DOM element by its selector. An A DOM element object represents an HTMl element like div, button, img  | cy.get('#username') or cy.get('.categories > ul > li') |
+| .type('value to type') | Types value into a DOM element | cy.get('#username).type('user1') |
+| .click() | Clicks on a DOM element | cy.get('.submitBtn').click() |
+| .should(chainers) or .should(chainers, value) | Creates an assertion against an element | cy.get('.submitBtn').should('be.visible') or cy.get('.categories > ul > li).should('have.length', 3) |
+
+For full description on how to use the Cypress API, refer to this [documentation](https://docs.cypress.io/api/api/table-of-contents.html)
+
 1. Scenario: Verify that title is displayed correctly
 2. Scenario: Verify that image gallery can be clicked successfully
-3. Scenario: Verify that gallery can be closed
-4. Scenario: Verify that Squarespace login functionality throws an error if incorrect details are provided - we will use a custom Cypress command for this scenario.
+3. Scenario: Verify that Squarespace login functionality throws an error if incorrect details are provided - we will use a custom Cypress command for this scenario.
 
 ### Scenario 1 example code
 ```
@@ -105,7 +130,7 @@ Cypress.Commands.add("login", (email, password) => { ... })
 ```
 
 ## Cypress CLI commands
-
+- To run tests headlessly, use `npx cypress run`. By default, this will log the results on your terminal.
 - To use a different type of Chrome browser, use `npx cypress run --browser [browserName]` (e.g. `npx cypress run --browser canary` canary if Canary is installed)
 - To run a single spec file, use `npx cypress run --spec [path to your spec file]` (e.g `npx cypress run --spec cypress/integration/image.gallery.spec.js`)
 - To record test runs, use `npx cypress run --record` however Dashboard service needs to be set up (next meetup!)   
