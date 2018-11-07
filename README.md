@@ -29,7 +29,7 @@ LinkedIn: [Let's connect](https://www.linkedin.com/in/marie-desiree-cruz-9584124
 - Basic Javascript knowledge
 
 ## Setup
-The remote machine will have all the programs you need to follow this session. Please click [Remote Machine](https://rdp.devopsplayground.com/#/) to launch the login screen to connect to the test machines. For any technical assistance, please ask around for help. 
+The remote machine will have all the programs you need to follow this session. On a new tab, please open [Remote Machine](https://rdp.devopsplayground.com/#/) to launch the login screen to connect to the test machines. For any technical assistance, please ask around for help. 
 
 If you wish to use your own machine on this playground, please make sure you have all the applications and/or programs listed on the [requirements](#requirements) and clone or download this repository. 
 
