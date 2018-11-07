@@ -21,9 +21,9 @@ LinkedIn: [Let's connect](https://www.linkedin.com/in/marie-desiree-cruz-9584124
 - [Selector Playground](#selector-playground)
 - [Writing Tests](#writing-tests)
   - [Cheat Sheet](#cheat-sheet)
-  - [Scenario 1: Verify that title is displayed correctly](#scenario-1)
-  - [Scenario 2: Verify that image gallery displays correctly](#scenario-2)
-  - [Scenario 3: Verify that Squarespace login works correctly](#scenario-3)
+  - [Scenario 1](#scenario-1)
+  - [Scenario 2](#scenario-2)
+  - [Scenario 3](#scenario-3)
 - [Cypress CLI Commands](#cypress-cli-commands)
 - [Further Reading](#further-reading)
 
@@ -115,22 +115,77 @@ Since this is a hands on session, I have included the Cypress commands that we w
 
 For full description on how to use the Cypress API, refer to this [documentation](https://docs.cypress.io/api/api/table-of-contents.html)
 
-1. Scenario: Verify that title is displayed correctly
-2. Scenario: Verify that image gallery can be clicked successfully
-3. Scenario: Verify that Squarespace login functionality throws an error if incorrect details are provided - we will use a custom Cypress command for this scenario.
+### Scenario 1
+For our first test scenario, let's validate that the header is displaying correctly. Going back to Visual Studio code, click on `cypress/integration/image.gallery.spec.js`
 
-### Scenario 1 example code
+![](images/scenario-1.png)
+
+Let's switch back to the Cypress test runner. By using the [selector playground](#selector-playground) feature, hover on the title and it should give you `#title` as its selector. For the icons list selector, let's use `.icons ul li`. Using some of the commands on [Cheat sheet](#cheat-sheet), our sample code should look like:
+
 ```
 it('should display the title correctly', () => {
   cy.get('#title').should('have.text', ' Marie Cruz ');
-  cy.get('.icons > ul > li').should('have.length', 3);
+  cy.get('.icons ul li').should('have.length', 3);
 });
 ```
 
-### Scenario 4 example code
+When you save your changes, watch how the test is updated automatically on the test runner. 
+
+![](images/scenario-1-runner.png)
+
+### Scenario 2
+For our second scenario, let's test that when you click on the first image, it should display the correct caption. Using some of the commands on [Cheat sheet](#cheat-sheet), our sample code should look like:
+
 ```
-Cypress.Commands.add("login", (email, password) => { ... })
+it('should click on the image gallery', () => {
+    cy.get(':nth-child(2) > .tile-viewport > img')
+      .click();
+
+    cy.get('.footerCaption_2r5qf')
+      .should('be.visible')
+      .should('have.text', 'Dog in the Park - Marie Cruz');
+  });
+```  
+ Notice that on this scenario, we are chaining two assertions.
+
+ In addition, Cypress lets you see the state of your application after performing any actions. In our scenario, we can observe how our application behaves when the click action has been called.
+
+ ![](images/scenario-2-before.png)
+ ![](images/scenario-2-after.png)
+
+### Scenario 3
+For our last scenario, we'll be testing an external application (Squarespace) and verify if their login functionality is behaving as expected. For this scenario, we will also make use of custom Cypress commands. 
+
+A custom Cypress command is a method that you write which you can use specifically on your application. For example, we can create our custom command for the 'login' action.
+
+To do this, navigate to this file `cypress/support/commands.js`.
+
+Replace the content of this file with the below example code:
+
 ```
+Cypress.Commands.add('login', (email, password) => { 
+  cy.get('.username')
+    .type(email);
+    
+  cy.get('.password')
+    .type(password);
+
+  cy.get('[data-test=login-button]')
+    .click();
+});
+```
+
+As you can see, the only thing that we have done differently is we made use of `Cypress.Commands.add()`. The content of this method is similar to what we have done on the first and second scenario. To make this test more re-usable, we can pass in parameters (email and password) so we can call this command multiple times with different login details.
+
+Go back to `cypress/integration/squarespace.login.spec.js` and type in the below sample code:
+
+```
+cy.login('test', 'testpasssword');
+cy.get('[data-test=sentinel-password-error]')
+  .should('be.visible');
+```
+
+We can now call our custom command called 'login' and pass in our test parameters (test as email and testpassword as our password).
 
 ## Cypress CLI commands
 - To run tests headlessly, use `npx cypress run`. By default, this will log the results on your terminal.
