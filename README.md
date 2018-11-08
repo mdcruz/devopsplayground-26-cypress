@@ -39,3 +39,7 @@ If you wish to use your own machine on this playground, please make sure you hav
 - [Introduction to Cypress by Brian Mann](https://www.youtube.com/watch?v=pJ349YntoIs)
 - [Example Cypress framework](https://github.com/cypress-io/cypress-example-kitchensink)
 - [Integrating Cypress with your CI Provider](https://docs.cypress.io/guides/guides/continuous-integration.html)
+
+# Survey Link
+We would love to hear your feedback and make improvements on the way we deliver our playground session. Please click the [survey](https://qabook.typeform.com/to/Ijm7N1
+) to participate.
