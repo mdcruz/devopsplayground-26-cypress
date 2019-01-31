@@ -26,3 +26,7 @@ cy.request('http://localhost:3004/articles')
   .its('status')
   .should('equal', 200);
 ```
+
+# Further Resource
+
+https://github.com/cypress-io/cypress-example-api-testing
