@@ -6,9 +6,11 @@
 [Scenario 1](scenario1.md) |
 [Scenario 2](scenario2.md) |
 [Scenario 3](scenario3.md) |
-[CLI commands](cli-commands.md) 
+[Scenario 4](scenario4.md) |
+[CLI commands](cli-commands.md)
 
 # Cypress Project Setup
+
 Once you are succesfully logged in to your instance, follow the steps below to setup Cypress.
 
 1. On your desktop, click Visual Studio Code
@@ -33,6 +35,7 @@ npx cypress verify
 You should see a message that Cypress is verified and ready to use.
 
 6. On the same terminal window, let's start up the sample application that we are testing today by typing in:
+
 ```
 npm run start
 ```
@@ -41,12 +44,12 @@ Please note that by default, Internet Explorer will launch and you might see som
 
 ![](/images/react-app.png)
 
-
 7. To open Cypress, let's go back to Visual Studio Code and open up a new terminal.
 
 ![](/images/vscode-new-terminal.png)
 
 On the new terminal, type in:
+
 ```
 npx cypress open
 ```

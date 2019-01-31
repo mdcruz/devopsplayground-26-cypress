@@ -6,7 +6,8 @@
 [Scenario 1](scenario1.md) |
 [Scenario 2](scenario2.md) |
 [Scenario 3](scenario3.md) |
-[CLI commands](cli-commands.md) 
+[Scenario 4](scenario4.md) |
+[CLI commands](cli-commands.md)
 
 # Cypress Test Runner
 
@@ -20,7 +21,7 @@ Cypress Test Runner allows you to interactively see how your tests run on each a
 
 ## Selector Playground
 
-The selector playground is a feature provided by Cypress as part of the test runner. This helps you find the selector for the element that you wish to test. To use this feature, simply click on 
+The selector playground is a feature provided by Cypress as part of the test runner. This helps you find the selector for the element that you wish to test. To use this feature, simply click on
 ![](/images/selector-playground.png) and hover on an element. Cypress will provide you with the selector to use.
 
 ![](/images/selector-playground-1.png)

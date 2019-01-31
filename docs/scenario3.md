@@ -6,10 +6,12 @@
 [Scenario 1](scenario1.md) |
 [Scenario 2](scenario2.md) |
 [Scenario 3](scenario3.md) |
-[CLI commands](cli-commands.md) 
+[Scenario 4](scenario4.md) |
+[CLI commands](cli-commands.md)
 
 # Scenario 3
-For our last scenario, we'll be testing an external application (Squarespace) and verify if their login functionality is behaving as expected. For this scenario, we will also make use of custom Cypress commands. 
+
+For our third scenario, we'll be testing an external application (Squarespace) and verify if their login functionality is behaving as expected. For this scenario, we will also make use of custom Cypress commands.
 
 A custom Cypress command is a method that you write which you can use specifically on your application. For example, we can create our custom command for the 'login' action.
 
@@ -18,10 +20,10 @@ To do this, navigate to this file `cypress/support/commands.js`.
 Replace the content of this file with the below example code:
 
 ```
-Cypress.Commands.add('login', (email, password) => { 
+Cypress.Commands.add('login', (email, password) => {
   cy.get('.username')
     .type(email);
-    
+
   cy.get('.password')
     .type(password);
 
