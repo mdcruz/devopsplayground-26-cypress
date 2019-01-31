@@ -1,4 +1,5 @@
-# Devops Playground #26: Hands on with Cypress 
+# Devops Playground #26: Hands on with Cypress
+
 ![](images/cypress-io-logo.png)
 
 [Home](README.md) |
@@ -9,9 +10,11 @@
 [Scenario 1](docs/scenario1.md) |
 [Scenario 2](docs/scenario2.md) |
 [Scenario 3](docs/scenario3.md) |
-[CLI commands](docs/cli-commands.md) 
+[Scenario 4](docs/scenario4.md) |
+[CLI commands](docs/cli-commands.md)
 
 # Introduction
+
 On this meetup, we will walk you through what Cypress is and how it's different from existing test automation tools such as Selenium. We'll show you how to setup Cypress in your machines and write your first Cypress test.
 
 Name: Marie Cruz
@@ -23,15 +26,17 @@ Email: marie.cruz@ecs-digital.co.uk
 LinkedIn: [Let's connect](https://www.linkedin.com/in/marie-desiree-cruz-95841242/)
 
 ## Requirements
+
 - Node and NPM installed
 - Code editor (e.g. VSCode) basic knowledge
 - Chrome browser
 - Basic Javascript knowledge
 
 ## Setup
-The remote machine will have all the programs you need to follow this session. On a new tab, please open [Remote Machine](https://rdp.devopsplayground.com/#/) to launch the login screen to connect to the test machines. For any technical assistance, please ask around for help. 
 
-If you wish to use your own machine on this playground, please make sure you have all the applications and/or programs listed on the [requirements](#requirements) and clone or download this repository. 
+The remote machine will have all the programs you need to follow this session. On a new tab, please open [Remote Machine](https://rdp.devopsplayground.com/#/) to launch the login screen to connect to the test machines. For any technical assistance, please ask around for help.
+
+If you wish to use your own machine on this playground, please make sure you have all the applications and/or programs listed on the [requirements](#requirements) and clone or download this repository.
 
 ## Further Reading
 
@@ -41,5 +46,5 @@ If you wish to use your own machine on this playground, please make sure you hav
 - [Integrating Cypress with your CI Provider](https://docs.cypress.io/guides/guides/continuous-integration.html)
 
 # Survey Link
-We would love to hear your feedback and make improvements on the way we deliver our playground session. Please click the [survey](https://qabook.typeform.com/to/Ijm7N1
-) to participate.
+
+We would love to hear your feedback and make improvements on the way we deliver our playground session. Please click the [survey](https://qabook.typeform.com/to/Ijm7N1) to participate.
