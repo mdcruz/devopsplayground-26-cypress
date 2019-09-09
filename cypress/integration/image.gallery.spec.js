@@ -20,4 +20,8 @@ describe('when I go to my image gallery application', () => {
       .should('have.text', 'Dog in the Park - Marie Cruz');
   });
 
+  it('should pass basic accessibility tests', () => {
+    // IMPLEMENT ME
+  });
+
 });
