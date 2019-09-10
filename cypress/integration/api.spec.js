@@ -1,10 +1,6 @@
-describe('API testing using Cypress', () => {
-  it('should have 200 status code', () => {
-    cy.request('http://localhost:3004/articles')
-      .its('status')
-      .should('equal', 200);
-  });
+/// <reference types="Cypress" />
 
+describe('API testing using Cypress', () => {
   it('should contain expected items', () => {
     const expectedData = {
       "articles": [{
@@ -29,11 +25,24 @@ describe('API testing using Cypress', () => {
     };
 
     cy.request('http://localhost:3004/articles').then(response => {
+      expect(response.status).to.equal(200);
       expect(response.body).to.deep.eq(expectedData.articles);
     }); 
   });
 
   it('should mock data successfully', () => {
-    // IMPLEMENT ME
+    cy.server();
+    cy.route('http://localhost:3004/articles', [{
+        "id": 1,
+        "title": "Test Article",
+        "author": "Marie",
+        "headline": "This is a test article"
+      }]
+    );
+
+    cy.request('http://localhost:3004/articles').then(response => {
+      console.log(response.body);
+    }); 
+
   });
 });

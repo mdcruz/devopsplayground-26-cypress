@@ -12,49 +12,38 @@
   padding-right: 20%;
 }
 
-body {
-  font-family: 'Raleway Dots', cursive;
-}
-
 .footer {
   padding-left: 20.3%;
   font-size: 10px;
 }
 
 .header {
-  display: inline-flex;
+  font-family: 'Raleway Dots', cursive;
+  font-weight: bolder;
+  font-size: larger;
+  text-align: center;
 }
 
-.title, .icons {
-  display: inline;
-}
-
-.title {
-  padding-left: 20%;
-  font-size: 20px;
-} 
-
-.icons {
-  padding-left: 36%;
-}
-
-ul {
+.icons ul, .authorList {
   list-style-type: none;
   margin: 0;
   overflow: hidden;
   padding-top: 20px;
 }
 
-li {
+.icons li {
   float: right;
   padding: 12px;
 }
 
-li a {
+.icons li a {
   text-align: center;
   text-decoration: none;
 }
 
+.icons li a img {
+  opacity: 0.5;
+}
 li a img {
   opacity: 0.5;
 }
